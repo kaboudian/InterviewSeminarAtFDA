@@ -415,11 +415,11 @@
 <section>
     <!-- So what?! --> 
     <section>
-        <h2>Ok! Eeeeem, What does it have to do with cardiac dynamics?!</h2>
+        <h2>Oook! Errrmmm! What does it have to do with cardiac dynamics?!</h2>
     </section>
 
     <!-- Remember the cardiac models? -->
-    <section>
+    <section data-transition=convex>
         <h2>Remember the cardiac models?</h2>
         <table>
         <td width="50%">
@@ -442,7 +442,7 @@
     </section>
 
     <!-- Why not treat the time-marching problem as an image manipulation problem?! -->
-    <section>
+    <section data-transition=concave>
         <h3>Why not treat the time-marching problem as an image manipulation problem?!</h3>
         <ol>
             <li>We consider our physical values on the domain to be stored into one/several image(s)!</li>
@@ -451,10 +451,10 @@
         </ol>
         <img data-src='pics/shader-time-stepping.png' width=60%></img>
     </section>
-    <section>
-        <h2>
-            Let's Consider the FitzHugh-Nagumo Model
-        </h2>
+    <section data-transition=convex>
+        <h3>
+            Let's consider the FitzHugh-Nagumo model:
+        </h3>
             \[
                 \frac{\partial v}{\partial t} = D\nabla^2v + v(1-v)(v-a)-w
             \]
@@ -463,7 +463,7 @@
                 \frac{\partial w}{\partial t} = \epsilon(bv-w+\delta) 
             \]
     </section>
-    <section>
+    <section data-transition=concave>
         <h4>Let's quickly review the corresponding shader:</h4>
         <div class=markdown 
             data-markdown="codes/fhn-frag.glsl" 
@@ -482,17 +482,17 @@
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- fhn -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section 
+<section  data-transition=fade 
 data-background-iframe="programs/fhn"
 data-background-interactive></section>
 
 <section>
-    <section>
+    <section  data-transition=slide>
         <h3>Cardiac tissue is an excitable medium.</h3>
     </section>
     <section>
         <h4>An excitable medium supports propagation of excitation waves</h4>
-        <img class='fragment' data-src='pics/tenor.gif'>
+        <img data-src='pics/tenor.gif'>
     </section>
     <section>
         <h4>An excitable medium exhibits periods of refractorines</h4>
@@ -529,19 +529,15 @@ data-background-interactive></section>
 <section>
     <h3>How fast is WebGL with Abubu.js when compared against other languages?</h3>
     <section>
-        </br>
-        <img data-src='pics/fhn.png' width=600px>
-    </section>
+        <img data-src='pics/fhn.png' width=800px>
+    </section  data-transition=fade>
     <section>
-        </br>
-        <img data-src='pics/mm.png' width=600px>
+        <img data-src='pics/mm.png' width=800px>
     </section>
-    <section>
-        </br>
-        <img data-src='pics/br.png' width=600px>
+    <section data-transition=fade>
+        <img data-src='pics/br.png' width=800px>
     </section>
-    <section>
-        </br>
+    <section  data-transition=fade>
         <img data-src='pics/gpu_comp.png'>
     </section>
 </section>
@@ -550,12 +546,12 @@ data-background-interactive></section>
 <!-- How accurate are these simulations using WebGL? -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section>
-    <section>
+    <section data-transition=convex>
         <h3>It's not enough to be fast...</h3>
         <h2 class=fragment>How reliable are the results?</h2>
     </section>
-    <section>
-        <h2>Let's campare against experimental results</h2>
+    <section data-transition=convex>
+        <h2>Let's campare against experimental results:</h2>
         <table>
             <td width=50%>
                 <img data-src=pics/pinned_core.gif height=300px>
@@ -574,7 +570,7 @@ data-background-interactive></section>
 <!-- What can we do with these? -->
 <!--&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&-->
 <section>
-    <h2>What can we do with this type of simulations?</h2>
+    <h1>What can we do with this type of simulations?</h1>
 </section>
 
 
@@ -600,18 +596,18 @@ data-background-interactive></section>
 <!-- Uncertainty quantification and variability in cardiac EP models -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section> 
-    <section>
-        <h3>Variability and uncertainty play an important role in device efficacy, reliability and safety!</h3>
+    <section data-transition=convex>
+        <h2>Variability and uncertainty play an important role in device efficacy, reliability and safety!</h2>
     </section>
 
-    <section>
-        <h2>Uncertainty quantification and variability studies in cardiac EP models can be done in multi-dimensions</h2>
+    <section data-transition=concave>
+        <h3>Uncertainty quantification and variability studies in cardiac EP models can be done in multi-dimensions!</h3>
     </section>
-    <section>
+    <section  data-transition=convex>
         <img data-src='pics/ito_uncertainty.jpg' height=500px>
         <small> Snapshots of activity at t = 1, 000 ms for 100 random parameters, under Ito parameter uncertainty in the canine cell model by Pathnamanathan et al (2019).</small>
     </section>
-    <section>
+    <section  data-transition=concave>
         <h4>For details and more on this study see</h4>
         <img data-src='pics/pras.png' width=700px>
     </section>
@@ -624,7 +620,7 @@ data-background-interactive></section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- slide -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section data-transition=concave>
+<section data-transition=convex>
     <h3>At this point, I think you are almost convinced, but...</h3>
     <img data-src=pics/square.png height=300px class=fragment></img>
     <img data-src=pics/heart.png height=300px class=fragment></img> 
@@ -668,19 +664,17 @@ data-background-interactive></section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- How do we do it?                                                   -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section data-transition=fade>
+<section data-transition=zoom>
     <section>        
-        <h2>How do we do simulations in 3D?</h2>
+        <h2>How do we simulate dynamics in 3D?</h2>
     </section>
 
-    <section>
-        <h3>It's easy. All we have to do is to flatten 3D space into 2:-D</h3>
-        </br>
+    <section data-transition=convex>
+        <h4>It's easy. All we have to do is to flatten 3D space into 2:-D</h4>
         <img data-src='pics/flatMatrix_128x128x64.png' height=500px></img>
     </section>
-    <section>
-        <h3>... and use the following function instead of texture:</h3>
-        </br>
+    <section data-transition=convex>
+        <h4>... and use the following function instead of texture:</h4>
         <div class=markdown data-markdown='codes/Texture3D.glsl'></div> 
     </section>
 </section>
@@ -698,19 +692,41 @@ data-background-interactive></section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- 4v Atrial model                                                    -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+<section>
+    <h3>Ready for the simulation?</h3>
+    <h4 class=fragment>Let's use a patient specific model:</h4>
+    <p class=fragment>Patient specific fitting of the model can be helpful in understanding why dynamics can be different for different patients.</p>
+</section>
+
+
 <section data-background-iframe="programs/3D-Atrial"
         data-background-interactive>
 </section>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- Anatomical variability -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section>
-    <p>Patient specific fitting of the model can be helpful in understanding why dynamics can be different for different patients.</p>
+    <section>
+        <h2>This technology can enable us to study the effects of variability of patient specific anatomies</h2>
+    </section>
+    <section data-background-iframe="programs/ORTP_Patients"
+        data-background-interactive>
+    </section>
 </section>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- AR-VR Applications and NSF/FDA SIR award -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section>
+<section data-transition=zoom>
    <section>
+       <h2>Shouldn't we use this technology in AR/VR?</h2>
+   </section>
+   <section data-transition=convex>
+        <h3>Of course we should!</h3>
+   </section>
+   <section data-transition=concave>
     <p>These simulations can become the heart and sole of AR and VR programs such as this one:</p>
     <video  data-autoplay data-src="videos/VR_heart_demo_FDA_GATech.mp4" height=400px controls></video>
     </section> 
@@ -733,21 +749,9 @@ data-background-interactive></section>
 </section>
 
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<!-- Anatomical variability -->
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section>
-    <section>
-        <h2>This technology can enable us to study the effects of variability of patient specific anatomies</h2>
-    </section>
-    <section data-background-iframe="programs/ORTP_Patients"
-        data-background-interactive>
-    </section>
-</section>
-
-<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- Fluid-flow -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section>
+<section data-transition=convex>
     <section>
         <h2>Last question: can we bring fluid-flow into the picture?</h2>
     </section>
@@ -760,37 +764,53 @@ data-background-interactive></section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- Sorry, one more! -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section>
+<section data-transition=zoom>
     <h3>So sorry! One more question...</h3>
+    <h4 class=fragment>Can you affor a pocket super computer?</h4>
     <div class=fragment>
-        <h4>Can you affor a pocket super computer?</h4>
         <video width=500px controls='show' muted autoplay class='center' data-src='videos/OVVR_64_cubed.mp4' type='video/mp4' class=fragment></video>
 
-        <p>Solving OVVR Model in 3D: 1.7 billion ODEs solved per second!</p>
+        <p>Solving OVVR Model in 3D! This phone is solving <span style='color:red'>1.7 billion</span> ODEs per second!</p>
     </div>
 </section>
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <!-- concluding remarks -->
 <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-<section>
+<section data-transition=fade>
     <h1>Concluding remarks</h1>
     <ul>
         <li>The proposed GPU technology can expand the types of research we can do!</li>
         <li>This is not just a replacement of HPC!</li>
         <li>The speed of the simulations can be illuminating and guiding us in our future studies.</li>
-        <li>The wide availability and universality of the technology, promotes level field for all groups in cardiac dyanmics.</li>
+        <li>The wide availability and universality of the technology, promotes a level field for all groups in cardiac dyanmics.</li>
     </ul>
+
+    <div class=boxed>
+       <p>If you would like to try these programs on your own computer visit:</p>
+    <p><b><a ref=https://github.com/kaboudian/InterviewSeminarAtFDA>https://github.com/kaboudian/InterviewSeminarAtFDA</a></b></p>
+ 
+    </div>
 </section>
 
-<section>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- Thank flavio -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section data-transition=concave>
     <h2>Special thanks to my great mentor...</h2>
     <img data-src='pics/flavio-fenton.png' height=500px>
 </section>
 
-<section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- Thank the funding agencies -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<section data-transition=concave>
     <img data-src='pics/sponsors.png' height=600px>
 </section>
 
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+<!-- Q&A -->
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <section>
     <h3>Thank you for the opportunity to present this work!</h3>
     <h4 class=fragment>Thank you for your attention!</h4>
