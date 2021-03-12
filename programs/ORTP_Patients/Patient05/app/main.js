@@ -274,6 +274,9 @@ function createGui(){
     gui.dispFldr.add(env, 'lightShift').step(0.05).onChange(function(){
         env.vrc.setLightShift( env.lightShift) ;
     } ) ;
+    gui.dispFldr.add(env.vrc, 'rotationX').step(0.01) ;
+    gui.dispFldr.add(env.vrc, 'rotationY').step(0.01) ;
+    gui.dispFldr.add(env.vrc, 'rotationZ').step(0.01) ;
 
     gui.dispFldr.add(env, 'frameRate').min(60).max(6000).step(60) ;
     gui.dispFldr.open() ;
@@ -1160,9 +1163,11 @@ function loadWebGL()
         colorbar        : true ,
         colormap        : env.colormap,
         unit            : 'mv',
-        eye : [4,4,4] ,
+        eye : [4,0,0] ,
         center: [0,0,0] ,
-        up : [0,0,1] ,
+        up : [0,1,0] ,
+        rotationZ : -1.45 ,
+        rotationX : -1.7, 
     } ) ;
     env.vrc.setCP(4) ;
     env.vrc.addMessage(
